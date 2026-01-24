@@ -10,5 +10,4 @@ Key considerations:
 - Simple reservation flow
 - Warm Mediterranean brand feel
 
-Figma file:
---> https://figma.com/file/xxxx
+🔗 Figma Designs: https://www.figma.com/design/9SetrepVetlaOQyZ4A6Ml1/Little-Lemon?node-id=12-262&t=4nEZCrR0S91SaVnm-1

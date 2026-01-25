@@ -3,7 +3,7 @@ import Button from "./Button"
 export default function Special({ description, title, price, foodItem }) {
     return(
         <div>
-            <img src={foodItem} alt="special food item" width={80} height={80}/>
+            <img src={foodItem} alt="special food item" width={80} height={80} loading="lazy"/>
             <div>
                 <div>
                     <h2>{title}</h2>

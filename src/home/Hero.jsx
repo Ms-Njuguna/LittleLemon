@@ -11,7 +11,7 @@ export default function Hero(){
                 <Button label={'Reserve A Table'}/>
             </div>
             <div>
-                <img src={Food} alt="Restaurant food"/>
+                <img src={Food} alt="Restaurant food" width={280} height={300}/>
             </div>
         </div>
     )

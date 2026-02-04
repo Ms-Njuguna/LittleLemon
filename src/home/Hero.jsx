@@ -1,9 +1,9 @@
 import Button from "../components/Button"
 import Food from "../assets/restauranfood.jpg"
 
-export default function Hero(){
+export default function Hero(props = {}){
     return (
-        <div>
+        <div data-cy={props['data-cy']}>
             <div>
                 <h1>Little Lemon</h1>
                 <h3>Chicago</h3>

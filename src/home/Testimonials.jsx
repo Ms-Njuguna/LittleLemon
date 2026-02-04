@@ -4,9 +4,9 @@ import p2 from "../assets/p2.png"
 import p3 from "../assets/p3.png"
 import p4 from "../assets/p4.png"
 
-export default function Testimonials(){
+export default function Testimonials(props = {}){
     return(
-        <div>
+        <div data-cy={props['data-cy']}>
             <h1>Testimonials</h1>
             <div>
                 <Testimonial profile={p3} firstName={'Kelly'} userName={'@that_girl_kelly'} review={'Dope place with very good food...'}/>

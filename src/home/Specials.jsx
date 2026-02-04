@@ -4,9 +4,9 @@ import GreekSalad from "../assets/greek salad.jpg"
 import Bruchetta from "../assets/bruchetta.svg"
 import LemonDessert from "../assets/lemon dessert.jpg"
 
-export default function Specials(){
+export default function Specials(props = {}){
     return(
-        <div>
+        <div data-cy={props['data-cy']}>
             <div>
                 <h1>This Week's Specials!</h1>
                 <Button label={'Order Online'}/>

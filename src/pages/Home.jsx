@@ -6,10 +6,10 @@ import About from "../home/About"
 export default function Home(){
     return (
         <>
-           <Hero />
-           <Specials />
-           <Testimonials />
-           <About />
+           <Hero data-cy="hero-section" />
+           <Specials data-cy="specials-section" />
+           <Testimonials data-cy="testimonials-section" />
+           <About data-cy="about-section"/>
         </>
     )
 }

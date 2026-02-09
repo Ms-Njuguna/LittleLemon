@@ -6,11 +6,13 @@ import Footer from "./components/Footer"
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-      </Routes>
-      <Footer />
+      <div className="overflow-x-hidden min-h-screen flex flex-col">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }

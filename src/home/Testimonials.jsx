@@ -6,10 +6,10 @@ import p4 from "../assets/p4.png"
 
 export default function Testimonials({ "data-cy": dataCy }){
     return(
-        <section data-cy={dataCy} className="bg-[#333333] text-white py-12">
+        <section data-cy={dataCy} className="bg-[#333333] text-white py-10">
             <div className="max-w-6xl mx-auto px-4">
                 <h1 className="text-3xl font-bold mb-8 text-center">Testimonials</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <Testimonial profile={p1} firstName="Joe" userName="@joe" review="Loved the service!" />
                     <Testimonial profile={p2} firstName="Alice" userName="@alice" review="Amazing ambience!" />
                     <Testimonial profile={p3} firstName="Kelly" userName="@kelly" review="Food was 🔥" />

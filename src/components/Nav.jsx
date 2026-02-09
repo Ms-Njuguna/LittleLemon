@@ -6,6 +6,15 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
   const cartCount = 0 // later replace with real cart state
 
+  const linkClasses =
+  "inline-block font-bold text-[#495E57] p-2 relative " +
+  "after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] " +
+  "after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left " +
+  "hover:text-[#F4CE14] hover:after:scale-x-100 " +
+  "active:text-[#F4CE14] active:after:scale-x-100 " +
+  "focus-visible:text-[#F4CE14] focus-visible:after:scale-x-100";
+
+
   return (
     <>
       {/* NAVBAR */}
@@ -18,15 +27,23 @@ export default function Nav() {
           </Link>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 font-semibold text-[#495E57]">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Reserve A Table</Link></li>
-            <li><Link to="/">Order Online</Link></li>
-          </ul>
+            <ul className="hidden sm:flex pt-1 gap-8">
+                <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
+                    <Link to="/">Home</Link>
+                </li>
+                <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
+                    <Link to="/">About</Link>
+                </li>
+                <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
+                    <Link to="/">Reserve A Table</Link>
+                </li>
+                <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
+                    <Link to="/">Order Online</Link>
+                </li>
+            </ul>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4">
 
             {/* CART — YOUR SVG */}
             <Link to="/cart" className="relative flex items-center gap-1">
@@ -84,10 +101,10 @@ export default function Nav() {
             ✕
           </button>
 
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/" onClick={() => setOpen(false)}>About</Link>
-          <Link to="/" onClick={() => setOpen(false)}>Reserve A Table</Link>
-          <Link to="/" onClick={() => setOpen(false)}>Order Online</Link>
+          <Link to="/" onClick={() => setOpen(false)} className={linkClasses}>Home</Link>
+          <Link to="/" onClick={() => setOpen(false)} className={linkClasses}>About</Link>
+          <Link to="/" onClick={() => setOpen(false)} className={linkClasses}>Reserve A Table</Link>
+          <Link to="/" onClick={() => setOpen(false)} className={linkClasses}>Order Online</Link>
 
           <hr />
 

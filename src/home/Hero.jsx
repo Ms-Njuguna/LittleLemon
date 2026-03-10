@@ -1,6 +1,7 @@
 import Button from "../components/Button"
 import Food from "../assets/restauranfood.jpg"
 import Lemon from "../assets/image.webp"
+import { Link } from "react-router-dom";
 
 export default function Hero({ "data-cy": dataCy }){
     return (
@@ -58,9 +59,9 @@ export default function Hero({ "data-cy": dataCy }){
                     <h1 className="text-4xl md:text-5xl font-bold text-[#F4CE14]">Little Lemon</h1>
                     <h3 className="text-xl md:text-2xl mt-1">Chicago</h3>
                     <p className="mt-4 text-sm md:text-base leading-relaxed max-w-md">Little Lemon is a charming neighbourhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</p>
-                    <div className="mt-6">
-                        <Button label="Reserve A Table" className="bg-[#F4CE14] text-[#000000] border-[#F4FE14]"/>
-                    </div>
+                    <Link to="/reservation">
+                        <Button label="Reserve A Table" className="bg-[#F4CE14] text-[#000000] border-[#F4FE14] mt-6"/>
+                    </Link>
                 </div>
                 <div className="flex-1 flex justify-center md:justify-end md:pt-28">
                     <img

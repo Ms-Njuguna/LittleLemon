@@ -47,20 +47,17 @@ export default function Footer() {
         </div>
 
         {/* Desktop nav links (unchanged). Hidden on mobile */}
-        <ul className="hidden sm:flex pt-6 gap-8">
-          <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
-            <Link to="/">About</Link>
-          </li>
-          <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
-            <Link to="/">Reserve A Table</Link>
-          </li>
-          <li className="font-bold text-[#495E57] hover:text-[#F4CE14] p-2 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F4CE14] after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out after:origin-left hover:after:scale-x-100">
-            <Link to="/">Order Online</Link>
-          </li>
-        </ul>
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className=" flex items-center gap-2 px-3 py-2 rounded-2xl border border-[#495E57] text-[#495E57] text-sm font-semibold hover:bg-[#495E57] hover:text-white transition my-auto"
+          aria-label="Back to top"
+        >
+          <span>Go back to the top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+            <path d="M440-160v-447L336-503l-56-57 200-200 200 200-56 57-104-104v447h-80Z" />
+          </svg>
+        </button>
 
         {/* Desktop icon-only social */}
         <div className="hidden sm:block">

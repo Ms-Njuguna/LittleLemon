@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import ReservationHero from "../reservation/ReservationHero";
 import ReservationStepOne from "../reservation/ReservationStepOne";
-import ReservationStepTwo from "../reservation/reservation/ReservationStepTwo";
+import ReservationStepTwo from "../reservation/ReservationStepTwo";
 import {
   INITIAL_RESERVATION_FORM,
 } from "../services/reservationData";

@@ -19,7 +19,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="sm:hidden flex items-center gap-2 px-3 py-2 rounded-2xl border border-[#495E57] text-[#495E57] text-sm font-semibold hover:bg-[#495E57] hover:text-white transition"
+            className="lg:hidden md:hidden flex items-center gap-2 px-3 py-2 rounded-2xl border border-[#495E57] text-[#495E57] text-sm font-semibold hover:bg-[#495E57] hover:text-white transition"
             aria-label="Back to top"
           >
             <span>Go back to the top</span>
@@ -50,7 +50,7 @@ export default function Footer() {
         <button
           type="button"
           onClick={scrollToTop}
-          className=" flex items-center gap-2 px-3 py-2 rounded-2xl border border-[#495E57] text-[#495E57] text-sm font-semibold hover:bg-[#495E57] hover:text-white transition my-auto"
+          className="hidden lg:flex md:flex lg:items-center md:items-center lg:gap-2 md:gap-2 lg:px-3 md:px-3 lg:py-2 md:py-2 rounded-2xl border border-[#495E57] text-[#495E57] text-sm font-semibold hover:bg-[#495E57] hover:text-white transition my-auto"
           aria-label="Back to top"
         >
           <span>Go back to the top</span>

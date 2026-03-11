@@ -8,7 +8,7 @@ export default function SeatingOptionCard({
     <div
       className={`rounded-[28px] border px-4 py-5 md:px-0 md:py-0 ${
         selected
-          ? "border-white/35 bg-white/[0.03]"
+          ? "border-white/35 bg-white/3"
           : "border-white/10 bg-transparent"
       }`}
     >

@@ -141,7 +141,7 @@ export default function AuthForm() {
         <p className="mt-4 text-center text-sm">
           {isLogin ? "No account?" : "Already have one?"}
           <button
-            onClick={() => navigate(isLogin ? "/signup" : "/login")}
+            onClick={() => setIsLogin(!isLogin)}
             className="ml-1 font-semibold underline"
           >
             {isLogin ? "Sign up" : "Log in"}

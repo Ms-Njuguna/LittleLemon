@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function InputField({ label, icon, type = "text", value, onChange }) {
   const [focused, setFocused] = useState(false);
   const isActive = focused || value;
+  const [showPassword, setShowPassword] = useState(false);
+
+  const inputType = type === "password" ? (showPassword ? "text" : "password") : type;
 
   return (
     <div className="relative">
@@ -28,13 +32,23 @@ export default function InputField({ label, icon, type = "text", value, onChange
           </span>
 
           <input
-            type={type}
+            type={inputType}
             value={value}
             onChange={(e) => onChange(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
             className="w-full bg-transparent text-base font-medium text-[#495E57] outline-none"
           />
+
+          {type === "password" && (
+                <button
+                   type="button"
+                   onClick={() => setShowPassword(!showPassword)}
+                   className="text-[#667085]"
+                >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+           )}
         </div>
       </div>
     </div>

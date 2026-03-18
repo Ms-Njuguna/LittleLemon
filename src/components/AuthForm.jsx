@@ -11,6 +11,20 @@ export default function AuthForm() {
     password: "",
   });
 
+  const [errors, setErrors] = useState({});
+
+  function validate() {
+       const newErrors = {};
+
+       if (!form.email) newErrors.email = "Email is required";
+       if (!form.password) newErrors.password = "Password is required";
+
+       if (!isLogin && !form.name) newErrors.name = "Name is required";
+
+       setErrors(newErrors);
+       return Object.keys(newErrors).length === 0;
+    }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#495E57] px-4">
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
@@ -26,6 +40,7 @@ export default function AuthForm() {
               icon={<User size={18} />}
               value={form.name}
               onChange={(val) => setForm({ ...form, name: val })}
+              error={errors.name}
             />
           )}
 
@@ -34,6 +49,7 @@ export default function AuthForm() {
             icon={<Mail size={18} />}
             value={form.email}
             onChange={(val) => setForm({ ...form, email: val })}
+            error={errors.email}
           />
 
           <InputField
@@ -42,10 +58,18 @@ export default function AuthForm() {
             icon={<Lock size={18} />}
             value={form.password}
             onChange={(val) => setForm({ ...form, password: val })}
+            error={errors.password}
           />
         </div>
 
-        <button className="mt-6 w-full rounded-xl bg-[#F4CE14] py-3 font-semibold">
+        <button
+            onClick={() => {
+                if (validate()) {
+                    console.log("submit");
+                }
+            }}
+            className="mt-6 w-full rounded-xl bg-[#F4CE14] py-3 font-semibold"
+        >
           {isLogin ? "Log In" : "Sign Up"}
         </button>
 

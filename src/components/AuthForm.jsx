@@ -27,7 +27,7 @@ export default function AuthForm() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#495E57] px-4">
-      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl">
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-in fade-in zoom-in-95">
 
         <h2 className="text-2xl font-semibold text-[#495E57] text-center mb-6">
           {isLogin ? "Welcome back" : "Create account"}

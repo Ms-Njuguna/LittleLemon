@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputField from "./ui/InputField";
 import { Mail, Lock, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
@@ -10,6 +11,8 @@ export default function AuthForm() {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({});
 
@@ -76,7 +79,7 @@ export default function AuthForm() {
         <p className="mt-4 text-center text-sm">
           {isLogin ? "No account?" : "Already have one?"}
           <button
-            onClick={() => setIsLogin(!isLogin)}
+            onClick={() => navigate(isLogin ? "/signup" : "/login")}
             className="ml-1 font-semibold underline"
           >
             {isLogin ? "Sign up" : "Log in"}

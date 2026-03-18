@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Lemon from "../assets/image.webp";
+import Logo from "../assets/Logo.svg"
 import InputField from "./ui/InputField";
 import { Mail, Lock, User, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -72,23 +73,9 @@ export default function AuthForm() {
               aria-hidden="true"
               className="
                 absolute
-                -left-8 top-36
-                md:-left-10 md:-bottom-15 md:top-auto
-                w-40 md:w-65
-                rotate-22
-                opacity-[0.06]
-                pointer-events-none select-none
-              "
-              />
-              <img
-              src={Lemon}
-              alt=""
-              aria-hidden="true"
-              className="
-                absolute
-                -left-8 top-36
-                md:left-55 md:-bottom-5 md:top-auto
-                w-40 md:w-85
+                -left-8 top-156
+                md:-left-10 md:-bottom-35 md:top-auto
+                w-60 md:w-95
                 rotate-22
                 opacity-[0.06]
                 pointer-events-none select-none
@@ -103,6 +90,9 @@ export default function AuthForm() {
   Back
 </button>
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-in fade-in zoom-in-95">
+        <div className="flex justify-center mb-4">
+  <img src={Logo} alt="Little Lemon" className="w-28 object-contain" />
+</div>
 
         <h2 className="text-2xl font-semibold text-[#495E57] text-center mb-6">
           {isLogin ? "Welcome back" : "Create account"}

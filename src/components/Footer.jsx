@@ -1,5 +1,4 @@
 import footerlogo from "../assets/Asset 20@4x.png"
-import { Link } from "react-router-dom"
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -7,7 +6,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#EDEFEE] text-[#403f3f] border-t border-[#dcdcdc]">
+    <footer className=" text-[#403f3f] border-t border-[#dcdcdc]">
       <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-10">
 
         {/* MOBILE: Logo + Back-to-top + icons in a row */}

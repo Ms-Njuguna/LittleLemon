@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Lemon from "../assets/image.webp";
 import InputField from "./ui/InputField";
-import { Mail, Lock, User } from "lucide-react";
+import { Mail, Lock, User, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function AuthForm() {
@@ -95,6 +95,13 @@ export default function AuthForm() {
               "
               />
               </div>
+      <button
+  onClick={() => navigate("/")}
+  className="absolute top-6 left-6 flex items-center gap-2 text-white hover:opacity-80 transition"
+>
+  <ArrowLeft size={18} />
+  Back
+</button>
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-in fade-in zoom-in-95">
 
         <h2 className="text-2xl font-semibold text-[#495E57] text-center mb-6">

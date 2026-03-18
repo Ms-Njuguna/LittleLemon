@@ -14,7 +14,7 @@ export default function SeatingOptionCard({
       className="flex w-full items-center justify-between"
       aria-label={`Select ${title}`}
     >
-      <span className="text-2xl md:text-[2rem] font-semibold text-left">
+      <span className="text-xl md:text-2xl font-semibold text-left">
         {title}
       </span>
 
@@ -27,7 +27,7 @@ export default function SeatingOptionCard({
       </span>
     </button>
 
-      <div className="space-y-6">{children}</div>
+      <div className="space-y-4">{children}</div>
     </div>
   );
 }

@@ -56,32 +56,30 @@ export default function DatePickerField({ value, onChange, error }) {
       `}</style>
 
       <div className="relative" ref={wrapperRef}>
-        <label className="mb-2 block text-base md:text-lg font-medium text-white">
-          Date
-        </label>
+        <label className="mb-1 block text-sm font-medium text-white/90">
+  Date
+</label>
 
         <button
-          type="button"
-          onClick={() => setOpen((prev) => !prev)}
-          className={`w-full rounded-[22px] bg-white px-5 py-5 text-left shadow-[0_8px_18px_rgba(0,0,0,0.10)] transition flex items-center justify-between gap-4 ${
-            error ? "ring-2 ring-[#E8A47A]" : ""
-          }`}
-        >
-          <div className="flex min-w-0 items-center gap-4">
-            <CalendarDays size={32} className="shrink-0 text-[#5F6F67]" />
-            <span
-              className={`truncate text-xl md:text-[1.75rem] font-medium ${
-                value ? "text-[#495E57]" : "text-[#667085]"
-              }`}
-            >
-              {value ? format(value, "EEEE, MMMM d") : "Select Date"}
-            </span>
-          </div>
+  type="button"
+  onClick={() => setOpen((prev) => !prev)}
+  className={`w-full rounded-xl bg-white px-4 py-3 text-left shadow-sm transition flex items-center justify-between gap-3 ${
+    error ? "ring-2 ring-[#E8A47A]" : ""
+  }`}
+>
+  <div className="flex min-w-0 items-center gap-3">
+    <CalendarDays size={20} className="text-[#5F6F67]" />
+    <span
+      className={`truncate text-base font-medium ${
+        value ? "text-[#495E57]" : "text-[#98A2B3]"
+      }`}
+    >
+      {value ? format(value, "MMM d, yyyy") : "Select date"}
+    </span>
+  </div>
 
-          <span className="shrink-0 text-[#5F6F67]">
-            {open ? <ChevronUp size={28} /> : <ChevronDown size={28} />}
-          </span>
-        </button>
+  {open ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+</button>
 
         {open && (
           <div className="absolute z-50 mt-3 rounded-2xl border border-[#e4e4e4] bg-white p-4 shadow-2xl">

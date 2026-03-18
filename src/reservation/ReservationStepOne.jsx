@@ -40,7 +40,7 @@ export default function ReservationStepOne({
             placeholder="Occasion"
             onChange={(value) => updateField("occasion", value)}
             options={OCCASION_OPTIONS}
-            icon={<PartyPopper size={32} />}
+            icon={<PartyPopper size={20} />}
             error={errors.occasion}
           />
         </SeatingOptionCard>
@@ -60,7 +60,7 @@ export default function ReservationStepOne({
             placeholder="No. of Diners"
             onChange={(value) => updateField("diners", value)}
             options={DINER_OPTIONS}
-            icon={<Users size={32} />}
+            icon={<Users size={20} />}
             error={errors.diners}
           />
 
@@ -70,7 +70,7 @@ export default function ReservationStepOne({
             placeholder="Select time"
             onChange={(value) => updateField("time", value)}
             options={TIME_OPTIONS}
-            icon={<Clock3 size={32} />}
+            icon={<Clock3 size={20} />}
             error={errors.time}
           />
         </SeatingOptionCard>

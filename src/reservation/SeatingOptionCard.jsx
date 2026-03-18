@@ -11,7 +11,7 @@ export default function SeatingOptionCard({
       <button
       type="button"
       onClick={onSelect}
-      className="flex w-full items-center justify-between"
+      className="flex w-full items-center justify-between mb-9"
       aria-label={`Select ${title}`}
     >
       <span className="text-xl md:text-2xl font-semibold text-left">
@@ -19,11 +19,11 @@ export default function SeatingOptionCard({
       </span>
 
       <span
-        className={`h-8 w-8 rounded-full border-2 flex items-center justify-center transition shrink-0
+        className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition shrink-0
           ${selected ? "border-white bg-white/15" : "border-white/70"}
         `}
       >
-        {selected && <span className="h-4 w-4 rounded-full bg-white" />}
+        {selected && <span className="h-3 w-3 rounded-full bg-white" />}
       </span>
     </button>
 

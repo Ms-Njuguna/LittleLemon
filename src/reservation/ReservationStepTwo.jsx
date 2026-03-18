@@ -21,7 +21,7 @@ export default function ReservationStepTwo({
             placeholder="First name"
             value={form.firstName}
             onChange={(e) => updateField("firstName", e.target.value)}
-            className={`w-full rounded-xl bg-white px-4 py-4 text-lg text-[#495E57] outline-none ${
+            className={`w-full rounded-xl bg-white px-4 py-3 text-lg text-[#495E57] outline-none ${
               errors.firstName ? "ring-2 ring-[#E8A47A]" : ""
             }`}
           />
@@ -42,7 +42,7 @@ export default function ReservationStepTwo({
             placeholder="Last name"
             value={form.lastName}
             onChange={(e) => updateField("lastName", e.target.value)}
-            className={`w-full rounded-xl bg-white px-4 py-4 text-lg text-[#495E57] outline-none ${
+            className={`w-full rounded-xl bg-white px-4 py-3 text-lg text-[#495E57] outline-none ${
               errors.lastName ? "ring-2 ring-[#E8A47A]" : ""
             }`}
           />
@@ -63,7 +63,7 @@ export default function ReservationStepTwo({
             placeholder="you@company.com"
             value={form.email}
             onChange={(e) => updateField("email", e.target.value)}
-            className={`w-full rounded-xl bg-white px-4 py-4 text-lg text-[#495E57] outline-none ${
+            className={`w-full rounded-xl bg-white px-4 py-3 text-lg text-[#495E57] outline-none ${
               errors.email ? "ring-2 ring-[#E8A47A]" : ""
             }`}
           />
@@ -84,7 +84,7 @@ export default function ReservationStepTwo({
             placeholder="0712345678"
             value={form.phone}
             onChange={(e) => updateField("phone", e.target.value)}
-            className={`w-full rounded-xl bg-white px-4 py-4 text-lg text-[#495E57] outline-none ${
+            className={`w-full rounded-xl bg-white px-4 py-3 text-lg text-[#495E57] outline-none ${
               errors.phone ? "ring-2 ring-[#E8A47A]" : ""
             }`}
           />
